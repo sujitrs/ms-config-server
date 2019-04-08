@@ -1,6 +1,6 @@
-FROM openjdk:latest
+# ms-config-server
+FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-VOLUME E:/_fsconfig/ /_fsconfig/
 ARG DEPENDENCY=target/dependency
 COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY ${DEPENDENCY}/META-INF /app/META-INF
