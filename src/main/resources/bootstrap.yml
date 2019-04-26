@@ -22,10 +22,24 @@ logging:
     org.springframework.boot.env.PropertySourcesLoader: TRACE
     org.springframework.cloud.config.server: DEBUG
     
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+      
+#oauth2ServerCheckTokenUri: http://localhost:8181/oauth/check_token
+#security:
+ # oauth2: 
+  #  resource:
+   #   token-info-uri: http://localhost:8181/account
+    #  user-info-uri: http://localhost:8181/account
+security:
+  oauth2:
+    resourceserver:
+      key-uri: http://localhost:8181/oauth/check_token
+    
+      
+          
 #server:
 #  port: 9999
       
