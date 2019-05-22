@@ -46,7 +46,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Bean
     public TokenStore tokenStore() {
-       // return new JwtTokenStore(accessTokenConverter());
+       // return new JwtTokenStore(accessTokenConverter()); /* In case if JWT based tokens are to be used*/
     	return new JdbcTokenStore(dataSource());
     }
     @Bean

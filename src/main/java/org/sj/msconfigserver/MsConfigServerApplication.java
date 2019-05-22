@@ -21,27 +21,12 @@ import org.springframework.security.oauth2.provider.token.ResourceServerTokenSer
 @EnableWebSecurity
 public class MsConfigServerApplication extends WebSecurityConfigurerAdapter {
 	
-	/*
-	 * @Value("${oauth2ServerCheckTokenUri}") private String uri;
-	 */
 	
 	public static void main(String[] args) {
 		SpringApplication.run(MsConfigServerApplication.class, args);
 	}
 
 	
-	/*
-	 * @Bean public ResourceServerTokenServices tokenServices() {
-	 * RemoteTokenServices tokenServices = new RemoteTokenServices();
-	 * tokenServices.setClientId("config-server");
-	 * tokenServices.setClientSecret("password");
-	 * tokenServices.setCheckTokenEndpointUrl(uri); return tokenServices; }
-	 * 
-	 * @Override public AuthenticationManager authenticationManagerBean() throws
-	 * Exception { OAuth2AuthenticationManager authenticationManager = new
-	 * OAuth2AuthenticationManager();
-	 * authenticationManager.setTokenServices(tokenServices()); return
-	 * authenticationManager; }
-	 */
+	
 }
 
